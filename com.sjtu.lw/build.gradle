@@ -1,0 +1,23 @@
+plugins {
+	id 'application'
+}
+
+mainClassName = 'edu.sjtu.lw.Main'
+
+dependencies {
+	implementation(
+			project(':com.ibm.wala.cast.js'),
+			project(':com.ibm.wala.cast.js.rhino'),
+	)
+}
+
+tasks.named('processTestResources') {
+	from project(':com.ibm.wala.cast.js').tasks.named('processTestResources')
+}
+
+application {
+	mainClass = mainClassName
+}
+
+apply from: rootProject.file("gradle-mvn-push.gradle")
+

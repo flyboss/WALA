@@ -1,0 +1,2 @@
+- add our project into root settings.gradle
+- build `./gradlew :com.sjtu.lw:build`, run `./gradlew :com.sjtu.lw:run`
