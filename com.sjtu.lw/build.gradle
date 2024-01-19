@@ -8,6 +8,8 @@ dependencies {
 	implementation(
 			project(':com.ibm.wala.cast.js'),
 			project(':com.ibm.wala.cast.js.rhino'),
+			implementation("com.squareup.moshi:moshi:1.11.0"),
+			implementation('commons-cli:commons-cli:1.4')
 	)
 }
 
